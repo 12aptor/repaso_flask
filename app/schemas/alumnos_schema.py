@@ -8,6 +8,3 @@ class AlumnoSchema(Schema):
   edad = fields.Integer(required=True, validate=campo_necesario)
   estado = fields.Boolean(dump_only=True)
   curso_id = fields.Integer(required=True, validate=campo_necesario)
-
-alumno_schema = AlumnoSchema()
-alumnos_schema = AlumnoSchema(many=True)

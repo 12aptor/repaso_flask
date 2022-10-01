@@ -1,5 +1,7 @@
 from app import app
+from app.controllers.alumnos_controller import AlumnoController
 
-@app.route("/alumnos")
+@app.route("/alumnos", methods=['GET'])
 def alumnos():
-  return "Esta es la ruta alumnos 😁"
+  listaAlumnos = AlumnoController()
+  return listaAlumnos.getAll()
